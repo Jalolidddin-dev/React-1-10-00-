@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { IoMoon } from "react-icons/io5";
+import Header from "./components/Header";
 
 function App() {
   const [value, setValue] = useState(false);
@@ -20,9 +21,8 @@ function App() {
     <div>
       {/* <h1>{value}</h1>
       <button onClick={() => setValue("Salom dunyo")}>change</button> */}
-      <button onClick={iconSet}>
-        {value ? <IoMoon /> : <MdOutlineWbSunny />}
-      </button>
+      <button>{value ? <IoMoon /> : <MdOutlineWbSunny />}</button>
+      <Header iconSet={iconSet} />
     </div>
   );
 }
